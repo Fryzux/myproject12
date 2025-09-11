@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Пример конкатенации строк</title>
+</head>
+<body>
+  <!-- Этот div будет содержать результат конкатенации -->
+  <div id="output"></div>
+  
+  <script>
+    // Объявляем первую строку
+    var str1 = "Добро пожаловать, ";
+    
+    // Объявляем вторую строку
+    var str2 = "студент!";
+    
+    // Конкатенируем строки с помощью оператора +
+    var fullMessage = str1 + str2;
+    
+    // Вставляем результат в HTML-элемент с id "output"
+    document.getElementById("output").textContent = fullMessage;
+
+    // Можно использовать метод .concat() как альтернативу
+    var message2 = str1.concat(str2);
+    // Также можно добавить результат в другой элемент
+    // document.getElementById("output2").textContent = message2;
+  </script>
+</body>
+</html>
