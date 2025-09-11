@@ -2,4 +2,4 @@
 ## Проект
 Этот репозиторий является каркасом для будущего веб-приложения.
 ## Ссылки
-- [Публичная страница на GitHub Pages](https://fryzux.github.io/myproject12/)
+- [Публичная страница на GitHub Pages](https://fryzux.github.io/myproject12/scr/index.html)
