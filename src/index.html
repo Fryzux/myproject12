@@ -12,14 +12,18 @@
 </head>
 
 <body>
-    <!-- Верхняя часть страницы -->
-    <header>
-        <a href="index.html">Логотип</a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">О нас</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
+    <header class="header">
+        <nav class="header__nav" aria-label="Основная навигация">
+            <ul class="header__nav-list">
+                <li class="header__nav-item">
+                    <a href="index.html" class="header__nav-link header__nav-link--active" aria-current="page">Главная</a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="about.html" class="header__nav-link">О нас</a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="contacts.html" class="header__nav-link">Контакты</a>
+                </li>
             </ul>
         </nav>
     </header>
