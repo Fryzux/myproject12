@@ -74,6 +74,14 @@
             height: 100%;
             border: none;
         }
+        /* Стили для локального видео */
+        
+        .local-video {
+            width: 100%;
+            max-width: 640px;
+            aspect-ratio: 16 / 9;
+            margin: 20px 0;
+        }
     </style>
 </head>
 
@@ -117,6 +125,15 @@
                 <iframe src="https://vk.com/video_ext.php?oid=226973300&id=456239986&hash=c2ca1c9da8fee9c3&hd=2" allowfullscreen allow="autoplay; encrypted-media"></iframe>
             </div>
         </section>
+
+        <section>
+            <h2>Локальное видео</h2>
+            <video controls poster="../static/poster-image.jpg" class="local-video">
+                <source src="../static/video-file.mp4" type="video/mp4" />
+                Ваш браузер не поддерживает видео.
+            </video>
+        </section>
+
     </main>
 
     <footer>
