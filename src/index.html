@@ -2,66 +2,75 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная сайта</title>
-    <meta name="description" content="Краткое описание нашей главной страницы вашего сайта">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../static/styles.css">
 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная сайта</title>
+
+    <meta name="description" content="Краткое описание нашей главной страницы вашего сайта" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../static/styles.css" />
 </head>
 
 <body>
-    <!-- БЭМ -->
-    <header class="header">
-        <nav class="header__nav">
-            <ul class="nav__list">
-                <li class="nav__item"><a href="#" class="nav__link nav__link--active">Главная</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
-            </ul>
-        </nav>
-    </header>
+
+    <!-- Шапка и основная навигация -->
 
     <header class="header">
+
         <nav class="header__nav" aria-label="Основная навигация">
+
             <ul class="header__nav-list">
+
                 <li class="header__nav-item">
-                    <a href="index.html" class="header__nav-link header__nav-link--active" aria-current="page">Главная</a>
-                </li>
+                    <a href="index.html" class="header__nav-link header__nav-link--active" aria-current="page">Главная</a>                 </li>
+
                 <li class="header__nav-item">
-                    <a href="about.html" class="header__nav-link">О нас</a>
-                </li>
+                    <a href="about.html" class="header__nav-link">О нас</a>                 </li>
+
                 <li class="header__nav-item">
-                    <a href="contacts.html" class="header__nav-link">Контакты</a>
-                </li>
+                    <a href="contacts.html" class="header__nav-link">Контакты</a>                 </li>
             </ul>
         </nav>
     </header>
 
-    <!-- Основная часть страницы -->
-    <main>
-        <h1>Добро пожаловать на наш сайт!</h1>
 
-        <section id="services">
-            <h2>Наши услуги</h2>
+    <!-- Основная часть -->
+
+    <main class="container">
+
+        <h1 class="section__title">Добро пожаловать на наш сайт!</h1>
+
+
+        <section class="section" id="services">
+
+            <h2 class="section__title">Наши услуги</h2>
+
             <p>Описание наших услуг</p>
-            <a href="#contacts">Связаться с нами</a>
-        </section>
+            <a href="#contacts" class="link">Связаться с нами</a>         </section>
 
-        <section id="portfolio">
-            <h2>Портфолио</h2>
+
+        <section class="section" id="portfolio">
+
+            <h2 class="section__title">Портфолио</h2>
+
             <p>Список наших работ</p>
         </section>
 
-        <section id="contacts">
-            <h2>Связь с нами</h2>
+
+        <section class="section" id="contacts">
+
+            <h2 class="section__title">Связь с нами</h2>
+
             <p>Контактная информация</p>
         </section>
     </main>
 
-    <footer>
+
+    <footer class="footer">
+
         <p>&copy; 2023 Название вашего сайта. Все права защищены.</p>
+
         <p>Телефон: +7 (123) 456-78-90</p>
     </footer>
 </body>

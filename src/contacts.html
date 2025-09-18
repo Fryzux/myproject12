@@ -2,88 +2,124 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Контакты</title>
-    <meta name="description" content="Контакты компании">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../static/styles.css">
+
+    <meta name="description" content="Контакты компании" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../static/styles.css" />
 </head>
 
 <body>
-    <!-- БЭМ -->
+
+    <!-- Шапка с навигацией по БЭМ -->
+
     <header class="header">
-        <nav class="header__nav">
-            <ul class="nav__list">
-                <li class="nav__item"><a href="#" class="nav__link nav__link--active">Главная</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+
+        <nav class="header__nav" aria-label="Основная навигация">
+
+            <ul class="header__nav-list">
+
+                <li class="header__nav-item">
+                    <a href="index.html" class="header__nav-link">Главная</a>                 </li>
+
+                <li class="header__nav-item">
+                    <a href="about.html" class="header__nav-link">О нас</a>                 </li>
+
+                <li class="header__nav-item">
+                    <a href="contacts.html" class="header__nav-link header__nav-link--active" aria-current="page">Контакты</a>                 </li>
             </ul>
         </nav>
     </header>
 
-    <!-- Верхняя часть страницы -->
-    <header>
-        <a href="index.html">Логотип</a>
-        <nav aria-label="Хлебные крошки">
-            <a href="index.html">Главная</a>
-            <span>→</span>
-            <span>Контакты</span>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">О нас</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Основная часть страницы -->
-    <main>
-        <h1>Наши контакты</h1>
+    <!-- Хлебные крошки -->
 
-        <section>
-            <h2>Наши телефоны</h2>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+
+        <ul class="breadcrumbs__list">
+
+            <li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+
+            <li class="breadcrumbs__item">→</li>
+
+            <li class="breadcrumbs__item" aria-current="page">Контакты</li>
+        </ul>
+    </nav>
+
+
+    <!-- Основной контент страницы -->
+
+    <main class="container">
+
+        <h1 class="section__title">Наши контакты</h1>
+
+
+        <section class="section">
+
+            <h2 class="section__title">Наши телефоны</h2>
+
             <p>Телефоны для связи</p>
         </section>
 
-        <section>
-            <h2>Наши соц.сети</h2>
+
+        <section class="section">
+
+            <h2 class="section__title">Наши соц.сети</h2>
+
             <p>Ссылки на наши соц. сети</p>
         </section>
 
-        <h1>Форма обратной связи</h1>
-        <form id="ContactForm">
-            <label for="username">Ваше имя:</label>
-            <input type="text" id="username" name="username" required>
 
-            <label for="phone">Номер телефона:</label>
-            <input type="text" id="phone" name="phone" required>
+        <section class="section">
 
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email" required>
+            <h2 class="section__title">Форма обратной связи</h2>
 
-            <label for="cource">Ваш курс</label>
-            <select id="cource" name="cource">
-                <option value="no">Не выбрано</option>
-                <option value="1">1 курс</option>
-                <option value="2">2 курс</option>
-                <option value="3">3 курс</option>
-                <option value="4">4 курс</option>
-                <option value="other">Другое</option>
-            </select>
+            <form class="form" id="ContactForm">
 
-            <label for="message">Ваше обращение:</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
+                <div class="form__field">
+                    <label class="form__label" for="username">Ваше имя:</label>                     <input class="form__input" type="text" id="username" name="username" required />                 </div>
 
-            <button type="submit">Отправить форму</button>
-            <button type="reset">Очистить форму</button>
-        </form>
+
+                <div class="form__field">
+                    <label class="form__label" for="phone">Номер телефона:</label>                     <input class="form__input" type="text" id="phone" name="phone" />                 </div>
+
+
+                <div class="form__field">
+                    <label class="form__label" for="email">Email:</label>                     <input class="form__input" type="email" id="email" name="email" required />                 </div>
+
+
+                <div class="form__field">
+                    <label class="form__label" for="course">Ваш курс:</label>                     <select class="form__input" id="course" name="course">
+                        <option value="">Не выбрано</option>
+                        <option value="1">1 курс</option>
+                        <option value="2">2 курс</option>
+                        <option value="3">3 курс</option>
+                        <option value="4">4 курс</option>
+                        <option value="other">Другое</option>
+                    </select>                 </div>
+
+
+                <div class="form__field">
+                    <label class="form__label" for="message">Ваше обращение:</label>                     <textarea class="form__input" id="message" name="message" rows="6"></textarea>                 </div>
+
+
+                <div class="form__actions">
+                    <button type="submit" class="form__submit">Отправить форму</button>                     <button type="reset" class="form__reset">Очистить форму</button>                 </div>
+            </form>
+        </section>
     </main>
 
-    <footer>
+
+    <footer class="footer">
+
         <p>&copy; 2023 Название вашего сайта. Все права защищены.</p>
+
         <p>Телефон: +7 (123) 456-78-90</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 
