@@ -342,5 +342,23 @@ html {
     border-radius: var(--border-radius);
 }
 
+.section {
+    position: relative;
+    height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../static/image.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section img {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
 
 /* --- Состояния hover/focus-visible/disabled/target уже учтены --- */

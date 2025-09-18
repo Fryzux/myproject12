@@ -2,18 +2,69 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>О нас</title>
-    <meta name="description" content="Информация о нас">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../static/styles.css">
-
+    <meta name="description" content="Информация о нас" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <style>
+        /* Стили градиентного оверлея для секции с изображением */
+        
+        .section {
+            position: relative;
+            height: 400px;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../static/image.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .section img {
+            max-width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 1;
+        }
+        /* Общие стили для навигации */
+        
+        .header__logo {
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        
+        .breadcrumbs {
+            margin: 10px 0;
+        }
+        
+        .nav__list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+        
+        .nav__link {
+            text-decoration: none;
+            color: #000;
+        }
+        
+        .nav__link--active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- БЭМ -->
     <header class="header">
+        <a href="index.html" class="header__logo">Логотип</a>
+        <nav aria-label="Хлебные крошки" class="breadcrumbs">
+            <a href="index.html">Главная</a>
+            <span>→</span>
+            <span>О нас</span>
+        </nav>
         <nav class="header__nav">
             <ul class="nav__list">
                 <li class="nav__item"><a href="#" class="nav__link nav__link--active">Главная</a></li>
@@ -23,22 +74,10 @@
         </nav>
     </header>
 
-    <!-- Верхняя часть страницы -->
-    <header>
-        <a href="index.html">Логотип</a>
-        <nav aria-label="Хлебные крошки">
-            <a href="index.html">Главная</a>
-            <span>→</span>
-            <span>О нас</span>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">О нас</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
-    </header>
+    <section class="section">
+        <img src="../static/image.jpg" srcset="../static/image-small.jpg 320w, ../static/image-medium.jpg 640w, ../static/image.jpg 1024w" sizes="(max-width: 600px) 480px, 800px" alt="Пример responsive изображения" />
+    </section>
 
-    <!-- Основная часть страницы -->
     <main>
         <h1>Информация о нас</h1>
 
@@ -48,7 +87,7 @@
         </section>
 
         <section>
-            <h2>Наша конманда</h2>
+            <h2>Наша команда</h2>
             <p>Описание нашей команды</p>
         </section>
     </main>
