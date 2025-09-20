@@ -278,7 +278,7 @@ html {
 .hero {
     position: relative;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('../images/hero.jpg') center/cover no-repeat;
-    height: 400px;
+    background-repeat: no-repeat;
     border-radius: var(--border-radius);
 }
 
@@ -340,14 +340,13 @@ html {
     background-position: center;
     height: 280px;
     border-radius: var(--border-radius);
+    background-repeat: no-repeat;
 }
 
 .section {
     position: relative;
     height: 400px;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../static/image.jpg');
-    background-size: cover;
-    background-position: center;
+    background: none;
     display: flex;
     justify-content: center;
     align-items: center;
